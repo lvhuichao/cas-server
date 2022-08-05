@@ -500,7 +500,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <version>1.5.8.RELEASE</version>
-            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>org.eclipse.jetty.websocket</groupId>

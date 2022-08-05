@@ -1,10 +1,14 @@
 package org.tis.demo.cas.server.web;
 
 import org.tis.demo.cas.server.CasEmbeddedContainerUtils;
+
 import lombok.NoArgsConstructor;
+
 import org.apereo.cas.configuration.CasConfigurationProperties;
 import org.springframework.boot.Banner;
+
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
@@ -45,7 +49,7 @@ import java.util.Map;
         MongoDataAutoConfiguration.class,
         CassandraAutoConfiguration.class,
         DataSourceTransactionManagerAutoConfiguration.class,
-//        MetricsDropwizardAutoConfiguration.class,
+        //        MetricsDropwizardAutoConfiguration.class,
         RedisRepositoriesAutoConfiguration.class
 })
 @EnableConfigurationProperties(CasConfigurationProperties.class)
@@ -54,7 +58,7 @@ import java.util.Map;
 @EnableScheduling
 @NoArgsConstructor
 @Slf4j
-@ComponentScan(basePackages={"org.jasig.cas"})
+@ComponentScan(basePackages = {"org.jasig.cas", "org.tis.demo.cas.server.config"})
 public class CasWebApplication {
 
     /**
