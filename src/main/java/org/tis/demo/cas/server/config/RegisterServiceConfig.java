@@ -22,9 +22,9 @@ public class RegisterServiceConfig {
         regexRegisteredService.setServiceId("http://localhost:8081/.*");
         servicesManager.save(regexRegisteredService);
 
-        //http://127.0.0.1:3000/user/auth/cas/redirect
+        // local-fe
         RegexRegisteredService regexRegisteredService2 = new RegexRegisteredService();
-        regexRegisteredService.setServiceId("http://127.0.0.1:3000/user/auth/cas/redirect.*");
+        regexRegisteredService2.setServiceId("http://localhost:3001/user/auth/cas/redirect.*");
         servicesManager.save(regexRegisteredService2);
         servicesManager.load();
         log.info("registered service: {}", regexRegisteredService.getServiceId());
